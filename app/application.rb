@@ -21,7 +21,7 @@ class Application
         resp.write @@cart.join("\n")
       end
     elsif req.path.match(/add/)
-      item_check = req.param["item"]
+      item_check = req.params["item"]
       if @@cart.!include? item_check
         @@cart << item_check
       end
