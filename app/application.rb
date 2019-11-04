@@ -22,7 +22,7 @@ class Application
       end
     elsif req.path.match(/add/)
       item_check = req.params["item"]
-      if @@cart.!include? item_check
+      if @@cart.exclude? item_check
         @@cart << item_check
       end
 
