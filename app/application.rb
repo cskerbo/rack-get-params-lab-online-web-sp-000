@@ -19,8 +19,6 @@ class Application
         resp.write "Your cart is empty"
       else
         resp.write "@@cart"
-    elsif reg.path.match(/add/)
-
     else
       resp.write "Path Not Found"
     end
