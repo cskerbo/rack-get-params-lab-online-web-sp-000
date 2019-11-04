@@ -25,6 +25,8 @@ class Application
       unless @@cart.include?(item_check)
         @@cart << item_check
         resp.write "added #{item_check}"
+      else
+        resp.write "We don't have that item"
       end
 
 
