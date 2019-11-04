@@ -24,7 +24,7 @@ class Application
       item_check = req.params["item"]
       unless @@cart.include?(item_check)
         @@cart << item_check
-        resp.write "added #{item}"
+        resp.write "added #{item_check}"
       end
 
 
