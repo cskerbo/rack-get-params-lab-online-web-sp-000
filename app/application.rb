@@ -23,6 +23,7 @@ class Application
     elsif req.path.match(/add/)
       item_check = req.params["item"]
       if @@items.include?(item_check)
+        @@cart << item_check
         resp.write "added #{item_check}"
       else
         resp.write "We don't have that item"
