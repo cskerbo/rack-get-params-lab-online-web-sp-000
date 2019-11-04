@@ -20,6 +20,13 @@ class Application
       else
         resp.write @@cart.join("\n")
       end
+    elsif req.path.match(/add/)
+      item_check = req.param["item"]
+      if @@cart.!include? item_check
+        @@cart << item_check
+      end
+
+
     else
       resp.write "Path Not Found"
     end
