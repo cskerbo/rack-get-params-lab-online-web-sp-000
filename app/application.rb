@@ -18,7 +18,7 @@ class Application
       if @@cart.length == 0
         resp.write "Your cart is empty"
       else
-        resp.write "#{@@cart.to_s}"
+        resp.write "#{@@cart.join(", ")}"
       end
     else
       resp.write "Path Not Found"
